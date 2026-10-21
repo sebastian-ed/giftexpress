@@ -1,5 +1,5 @@
 import {data} from '../services/data.js';
-import {mountAdminShell} from '../components/admin-shell.js';
+import {mountAdminShell} from '../components/admin-shell.js?v=7';
 const $=x=>document.querySelector(x),escapeHtml=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const msg=(s,err=false)=>{$('#gxMessage').textContent=s;$('#gxMessage').className=err?'alert alert-danger':'alert alert-success'};
 const money=n=>new Intl.NumberFormat('es-AR',{style:'currency',currency:'ARS',maximumFractionDigits:0}).format(Number(n)||0);

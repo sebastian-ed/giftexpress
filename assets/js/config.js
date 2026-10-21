@@ -1,6 +1,6 @@
 export const CONFIG = {
   appName: 'GiftExpress',
-  demoMode: false,
+  demoMode: true,
   supabaseUrl: 'https://midkohahqsgrzrvdaiec.supabase.co',
   supabaseAnonKey: 'sb_publishable_rEtHNANDhuVAIWVt6rRpow_VLsYOR5-',
   edgeBaseUrl: 'https://midkohahqsgrzrvdaiec.supabase.co/functions/v1',
