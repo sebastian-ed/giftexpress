@@ -1,0 +1,19 @@
+GIFTEXPRESS - PUBLICAR EN GITHUB PAGES
+=====================================
+
+1. Descomprimí el ZIP.
+2. Abrí la carpeta giftexpress que contiene index.html, assets y admin.
+3. En github.com/sebastian-ed/giftexpress, subí TODOS los archivos y carpetas DEL INTERIOR de giftexpress, directamente a la raíz del repositorio.
+   En la raíz tienen que aparecer: index.html, catalogo.html, assets/, admin/, supabase/, .nojekyll.
+   NO subas solo los archivos HTML ni dejes una segunda carpeta giftexpress adentro del repositorio.
+4. Settings > Pages > Build and deployment > Deploy from a branch > main / (root).
+5. Comprobá las rutas (deben abrir contenido, no devolver 404):
+   https://sebastian-ed.github.io/giftexpress/assets/css/styles.css
+   https://sebastian-ed.github.io/giftexpress/assets/css/black-edition.css
+   https://sebastian-ed.github.io/giftexpress/assets/js/pages/home.js
+6. Abrí https://sebastian-ed.github.io/giftexpress/?v=6 y refrescá con Ctrl+F5.
+
+Los estilos están embebidos también en HTML para que un CSS externo no deje la página blanca.
+Sin la carpeta assets/js la tienda no puede generar catálogo dinámico ni hacer operaciones.
+GitHub Pages solo hospeda la parte estática; Supabase y las funciones se configuran por separado.
+No actives pagos reales sin probar autenticación, RLS, backend de pedidos y Mercado Pago.
