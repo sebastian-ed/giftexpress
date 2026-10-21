@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="MATE">
-<rect width="800" height="1000" fill="#d4b989"/><rect x="70" y="80" width="660" height="840" rx="18" fill="#fffaf0" stroke="#77593a" stroke-width="3"/>
-<circle cx="400" cy="385" r="185" fill="#77593a" opacity=".10"/><path d="M230 475 C300 300 500 300 570 475 C520 630 280 630 230 475Z" fill="#77593a" opacity=".88"/>
-<path d="M280 455 C340 375 460 375 520 455" fill="none" stroke="#fffaf0" stroke-width="20" stroke-linecap="round" opacity=".8"/>
-<text x="400" y="720" text-anchor="middle" font-family="Georgia,serif" font-size="48" fill="#77593a" font-weight="700">MATE</text>
-<text x="400" y="772" text-anchor="middle" font-family="Arial,sans-serif" font-size="20" letter-spacing="5" fill="#77593a">ARGENTINA</text>
-<text x="400" y="855" text-anchor="middle" font-family="Arial,sans-serif" font-size="18" fill="#6d675f">GiftExpress demo packaging</text></svg>
