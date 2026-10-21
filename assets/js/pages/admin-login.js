@@ -1,0 +1,3 @@
+import { CONFIG } from '../config.js';import { login,session,DEMO } from './admin-auth.js';
+async function init(){if(await session()){location.href=window.GX_BASE+'admin/dashboard.html';return}const hint=document.getElementById('demoHint');if(CONFIG.demoMode){hint.hidden=false;hint.textContent=`Demo: ${DEMO.email} / ${DEMO.password}`}document.getElementById('loginForm').onsubmit=async e=>{e.preventDefault();const fd=new FormData(e.currentTarget),err=document.getElementById('loginError');try{await login(fd.get('email'),fd.get('password'));location.href=window.GX_BASE+'admin/dashboard.html'}catch(ex){err.hidden=false;err.textContent=ex.message}}}
+init();

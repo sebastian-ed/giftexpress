@@ -1,0 +1,1 @@
+Ejecutar schema.sql, rls.sql y seed.sql iniciales; luego upgrade_multiproveedor.sql. En despliegues existentes ejecutar solamente la migración. Revisar notas de seguridad y pendientes del README principal.

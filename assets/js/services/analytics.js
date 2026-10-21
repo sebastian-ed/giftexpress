@@ -1,0 +1,1 @@
+export function track(event,params={}){window.dataLayer=window.dataLayer||[];window.dataLayer.push({event,...params});if(window.fbq)window.fbq('trackCustom',event,params);console.debug('[GiftExpress analytics]',event,params)}
