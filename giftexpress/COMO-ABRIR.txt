@@ -1,0 +1,19 @@
+GIFTEXPRESS - INSTRUCCIONES PARA WINDOWS
+
+1. Descomprimí TODO el ZIP en una carpeta.
+2. Entrá a la carpeta giftexpress.
+3. Hacé doble clic en INICIAR-GIFTEXPRESS.bat.
+4. Se abre http://localhost:8765/ en tu navegador.
+5. Dejá abierta la ventana de comandos mientras usás la web.
+
+NO ABRIR index.html con doble clic. Los módulos JS y las rutas /assets
+requieren un servidor web. Abrirlo como file:///C:/... muestra una web
+sin estilos, imágenes o catálogo.
+
+ADMINISTRACIÓN DEMO: http://localhost:8765/admin/
+
+Si Windows indica que falta Python, instalalo desde python.org o
+subí el contenido de esta carpeta a Netlify.
+
+IMPORTANTE: este modo demo no procesa pagos reales ni publica un negocio.
+Para producción deben configurarse Supabase y Mercado Pago.

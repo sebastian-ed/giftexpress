@@ -1,0 +1,7 @@
+import { CONFIG } from '../config.js';import { storage } from '../utils/storage.js';import { demoRates } from './demo-data.js';import { getSupabase } from './supabase.js';
+let liveRates=storage.get('gx_rates_cache',demoRates)||demoRates;
+export function getCurrency(){return storage.get('gx_currency',CONFIG.defaultCurrency)}
+export function setCurrency(c){if(CONFIG.supportedCurrencies.includes(c)){storage.set('gx_currency',c);location.reload()}}
+export async function loadRates(){if(CONFIG.demoMode){liveRates=demoRates;return liveRates}try{const sb=await getSupabase();const {data,error}=await sb.from('exchange_rates').select('currency_code,ars_per_unit,effective_at').order('effective_at',{ascending:false});if(error)throw error;const r={ARS:1};for(const row of data||[])if(!r[row.currency_code])r[row.currency_code]=Number(row.ars_per_unit);liveRates={...demoRates,...r};storage.set('gx_rates_cache',liveRates)}catch(e){console.warn('Using cached exchange rates',e)}return liveRates}
+export function convertFromARS(ars,currency=getCurrency(),rates=liveRates){if(currency==='ARS')return Number(ars||0);return Number(ars||0)/(Number(rates[currency])||1)}
+export function formatMoney(ars,currency=getCurrency(),rates=liveRates){const val=convertFromARS(ars,currency,rates);return new Intl.NumberFormat(undefined,{style:'currency',currency,maximumFractionDigits:currency==='ARS'?0:2}).format(val)}
